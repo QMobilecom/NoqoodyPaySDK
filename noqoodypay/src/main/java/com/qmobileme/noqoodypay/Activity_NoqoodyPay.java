@@ -63,10 +63,6 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
     List<PaymentChannel> paymentChannelList = new ArrayList<>();
     int RequestPayment = 1;
 
-//    private final static String QUEUE_NAME = "new_sample_queue";
-//    Connection connection;
-//    Channel channel;
-//    private static final String EXCHANGE_NAME = "RabbitMQModels.Consumers:MessageConsumer";
 
     @Override
     protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
@@ -94,20 +90,10 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
         ClientSecret = getIntent().getStringExtra(NoqoodyPay_Keys.ClientSecret);
 
 
-//        CustomerEmail = "saneebsalam@gmail.com";
-//        CustomerMobile = "50358807";
-//        ProjectCode = "9Px8d24D6Mg68j46J5";
-//        Description = "Description";
-//        RedirectURL = "https://www.noqoodypay.com/";
-
         binding.merchantName.setText(UserName);
         binding.description.setText(Description);
         binding.totalamount.setText("Total Amount: QAR " + NumberFormat_Currency.format(Double.parseDouble(Amount)));
         binding.granttotal.setText("QAR " + NumberFormat_Currency.format(Double.parseDouble(Amount)));
-//        Glide.with(this)
-//                .load(login_response.getImageLocation())
-//                .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE))
-//                .into(binding.merchantimage);
 
         Glide.with(this)
                 .load(R.drawable.loading_noqoody)
@@ -135,84 +121,14 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
         });
 
-//        try {
-//            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
-//                    .permitAll().build();
-//            StrictMode.setThreadPolicy(policy);
-//            main();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            binding.description.setText(e.getMessage());
-//        }
 
     }
 
-//    public void main() throws Exception {
-//        ConnectionFactory factory = new ConnectionFactory();
-////        factory.setHost("amqp://guest:guest@146.0.247.101:5672");
-//        factory.setUri("amqp://guest:guest@146.0.247.101:5672");
-//        connection = factory.newConnection();
-//        channel = connection.createChannel();
-//
-//        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-//        Toast.makeText(this, "Waiting for messages.", Toast.LENGTH_LONG).show();
-//        binding.description.setText("Waiting for messages.");
-//
-//        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-//            String message = new String(delivery.getBody(), "UTF-8");
-//            runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    Toast.makeText(Activity_NoqoodyPay.this, "Received. " + message, Toast.LENGTH_LONG).show();
-//                    binding.description.setText("Received. " + message);
-//                }
-//            });
-//
-//        };
-//        channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
-//        });
-//
-//    }
-
-//    public void main() throws Exception {
-//        ConnectionFactory factory = new ConnectionFactory();
-////        factory.setHost("amqp://guest:guest@146.0.247.101:5672");
-//        factory.setUri("amqp://guest:guest@146.0.247.101:5672");
-//        connection = factory.newConnection();
-//        channel = connection.createChannel();
-//
-//        channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
-//        String queueName = channel.queueDeclare().getQueue();
-//        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "");
-//
-//        binding.description.setText("Waiting for messages.");
-//
-//        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-//            String message = new String(delivery.getBody(), "UTF-8");
-//            runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    Toast.makeText(Activity_NoqoodyPay.this, "Received. " + message, Toast.LENGTH_LONG).show();
-//                    binding.description.setText("Received. " + message);
-//                }
-//            });
-//        };
-//        channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
-//        });
-//    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
-        //            channel.abort();
-//        try {
-//            channel.close();
-//            connection.abort();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-
 
     }
 
