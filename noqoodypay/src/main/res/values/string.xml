@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="failed">Failed…</string>
+    <string name="ok">OK</string>
+    <string name="error_did_not_find_any_content">Did not find any content. Try again with different image</string>
+
+
+</resources>

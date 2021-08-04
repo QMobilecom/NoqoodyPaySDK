@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qmobileme.noqoodypay">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name=".Activity_NoqoodyPay"
+            android:theme="@style/AppTheme_FullScreen" />
+        <activity android:name=".Activity_Payment_redirect" />
+    </application>
+</manifest>
