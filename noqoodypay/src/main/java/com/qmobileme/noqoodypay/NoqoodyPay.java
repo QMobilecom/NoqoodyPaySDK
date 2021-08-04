@@ -11,10 +11,6 @@ public class NoqoodyPay {
 
     public NoqoodyPay() {
 
-//        UserName = "z.nidal@qmobileme.com";
-//        Password = "User@123";
-//        Amount = "1";
-
     }
 
     public static void Pay(Activity activity, String UserName, String Password, String Amount,
