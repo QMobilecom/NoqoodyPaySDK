@@ -28,7 +28,7 @@
             android:contentDescription="@null"
             android:padding="15dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/logo" />
+            android:src="@drawable/noqoodypay_logo" />
 
     </RelativeLayout>
 
@@ -52,7 +52,7 @@
         android:layout_gravity="center"
         android:contentDescription="@null"
         android:scaleType="fitCenter"
-        android:src="@drawable/tick"
+        android:src="@drawable/noqoodypay_tick"
         android:translationX="-11dp"
         android:translationY="-5dp"
         android:visibility="invisible"

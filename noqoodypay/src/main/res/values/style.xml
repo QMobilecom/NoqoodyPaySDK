@@ -10,9 +10,9 @@
 
     <style name="AppTheme_FullScreen" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/NoqoodyPaycolorPrimary</item>
+        <item name="colorPrimaryDark">@color/NoqoodyPaycolorPrimary</item>
+        <item name="colorAccent">@color/NoqoodyPaycolorPrimary</item>
         <item name="fontFamily">@font/sf_ui_display_regular</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowTranslucentStatus">true</item>

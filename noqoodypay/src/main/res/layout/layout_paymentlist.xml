@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/NoqoodyPaycolorPrimary"
     android:paddingTop="30dp">
 
     <androidx.core.widget.NestedScrollView
@@ -26,7 +26,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="10dp"
                 android:contentDescription="@null"
-                android:src="@drawable/logo" />
+                android:src="@drawable/noqoodypay_logo" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:contentDescription="@null"
-                    android:src="@drawable/profile" />
+                    android:src="@drawable/noqoody_payprofile" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Merchant Name"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/NoqoodyPaycolorPrimary"
                         android:textSize="13dp"
                         android:textStyle="bold" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Description"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/NoqoodyPaycolorPrimary"
                 android:textSize="14dp"
                 android:textStyle="bold" />
 
@@ -91,7 +91,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="5dp"
                 android:text="Total Amount:"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/NoqoodyPaycolorPrimary"
                 android:textSize="12dp"
                 android:textStyle="bold" />
 
@@ -121,7 +121,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/NoqoodyPaycolorPrimary"
                         android:gravity="center_vertical"
                         android:padding="15dp"
                         android:text="@string/payable_amount"
@@ -153,7 +153,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="@string/total"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/NoqoodyPaycolorPrimary"
                             android:textSize="17dp"
                             android:textStyle="bold" />
 
@@ -209,7 +209,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:foregroundGravity="center"
-            android:indeterminateTint="@color/colorPrimaryDark" />
+            android:indeterminateTint="@color/NoqoodyPaycolorPrimary" />
 
 
     </RelativeLayout>

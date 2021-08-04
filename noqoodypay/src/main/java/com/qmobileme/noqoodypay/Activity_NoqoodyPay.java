@@ -194,7 +194,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
         Glide.with(this)
                 .load(login_response.getImageLocation())
-                .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE).error(R.drawable.profile))
+                .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE).error(R.drawable.noqoody_payprofile))
                 .into(binding.merchantimage);
 
         binding.rvLayoutLoading.setVisibility(View.VISIBLE);

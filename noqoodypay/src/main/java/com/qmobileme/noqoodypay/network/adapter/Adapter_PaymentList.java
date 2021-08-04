@@ -51,7 +51,7 @@ public class Adapter_PaymentList extends RecyclerView.Adapter<Adapter_PaymentLis
 
         if (position == this.position) {
             holder.tick.setVisibility(View.VISIBLE);
-            holder.rv_image.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.colorPrimary));
+            holder.rv_image.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.NoqoodyPaycolorPrimary));
         } else {
             holder.tick.setVisibility(View.INVISIBLE);
             holder.rv_image.setBackgroundTintList(null);
@@ -60,7 +60,7 @@ public class Adapter_PaymentList extends RecyclerView.Adapter<Adapter_PaymentLis
         holder.name.setText(Html.fromHtml(item_List.get(position).getChannelName()));
         Glide.with(mContext)
                 .load(item_List.get(position).getImageLocation())
-                .apply(RequestOptions.placeholderOf(R.drawable.logo).error(R.drawable.logo))
+                .apply(RequestOptions.placeholderOf(R.drawable.noqoodypay_logo).error(R.drawable.noqoodypay_logo))
                 .into(holder.image);
 
 

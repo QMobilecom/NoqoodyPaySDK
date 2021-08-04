@@ -34,7 +34,7 @@
                 android:layout_marginTop="30dp"
                 android:contentDescription="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/success_alert" />
+                android:src="@drawable/noqoodypay_success_alert" />
 
 
             <TextView
@@ -72,7 +72,7 @@
             android:layout_margin="30dp"
             android:contentDescription="@null"
             android:scaleType="centerInside"
-            android:src="@drawable/success_bg" />
+            android:src="@drawable/noqoodypay_success_bg" />
 
     </RelativeLayout>
 
