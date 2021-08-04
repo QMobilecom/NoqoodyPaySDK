@@ -5,10 +5,13 @@
 
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">false</item>
+        <item name="colorPrimary">@color/NoqoodyPaycolorPrimary</item>
+        <item name="colorPrimaryDark">@color/NoqoodyPaycolorPrimary</item>
+        <item name="colorAccent">@color/NoqoodyPaycolorPrimary</item>
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <style name="AppTheme_FullScreen" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme_FullScreen_noqoodypay" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/NoqoodyPaycolorPrimary</item>
         <item name="colorPrimaryDark">@color/NoqoodyPaycolorPrimary</item>

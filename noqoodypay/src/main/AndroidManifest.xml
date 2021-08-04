@@ -7,7 +7,9 @@
     <application>
         <activity
             android:name=".Activity_NoqoodyPay"
-            android:theme="@style/AppTheme_FullScreen" />
-        <activity android:name=".Activity_Payment_redirect" />
+            android:theme="@style/AppTheme_FullScreen_noqoodypay" />
+        <activity
+            android:name=".Activity_Payment_redirect"
+            android:theme="@style/AppTheme_FullScreen_noqoodypay" />
     </application>
 </manifest>
