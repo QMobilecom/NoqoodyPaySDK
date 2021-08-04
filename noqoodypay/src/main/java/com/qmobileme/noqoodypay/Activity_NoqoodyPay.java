@@ -98,7 +98,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
         Glide.with(this)
                 .load(R.drawable.loading_noqoody)
                 .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE))
-                .into(binding.layoutLoading.load);
+                .into(binding.load);
 
         //Payment List
         adapterpaymentlist = new Adapter_PaymentList(binding.rv.getContext(), paymentChannelList);
@@ -121,7 +121,6 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
         });
 
-
     }
 
 
@@ -136,7 +135,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
     public void onEvent(DataReceiveEvent event) {
         JSONObject response;
         try {
-            binding.layoutLoading.getRoot().setVisibility(View.GONE);
+            binding.rvLayoutLoading.setVisibility(View.GONE);
 
             response = new JSONObject(event.getResponseMessage());
 
@@ -178,7 +177,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
     void Login() {
 
-        binding.layoutLoading.getRoot().setVisibility(View.VISIBLE);
+        binding.rvLayoutLoading.setVisibility(View.VISIBLE);
         request.clear();
         request.put("grant_type", "password");
         request.put("response_type", "token");
@@ -197,7 +196,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
                 .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE).error(R.drawable.profile))
                 .into(binding.merchantimage);
 
-        binding.layoutLoading.getRoot().setVisibility(View.VISIBLE);
+        binding.rvLayoutLoading.setVisibility(View.VISIBLE);
 
         requestJSON = new JSONObject();
         try {
@@ -223,7 +222,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
     }
 
     void PaymentChannels(JSONObject response) {
-        binding.layoutLoading.getRoot().setVisibility(View.VISIBLE);
+        binding.rvLayoutLoading.setVisibility(View.VISIBLE);
 
         generateLinksResponse = new Gson().fromJson(response.toString(), GenerateLinksResponse.class);
 
@@ -241,7 +240,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
     void paymentStatus() {
 
-        binding.layoutLoading.getRoot().setVisibility(View.VISIBLE);
+        binding.rvLayoutLoading.setVisibility(View.VISIBLE);
 
         request.clear();
         request.put("ReferenceNo", ReferenceNo);
