@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:itemCount="2"
-                tools:listitem="@layout/item_paymentlist" />
+                tools:listitem="@layout/noqoodypay_item_paymentlist" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

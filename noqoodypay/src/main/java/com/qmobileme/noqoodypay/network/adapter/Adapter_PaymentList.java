@@ -86,7 +86,7 @@ public class Adapter_PaymentList extends RecyclerView.Adapter<Adapter_PaymentLis
         RelativeLayout rv_image;
 
         ViewHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.item_paymentlist, parent, false));
+            super(inflater.inflate(R.layout.noqoodypay_item_paymentlist, parent, false));
             name = itemView.findViewById(R.id.name);
             image = itemView.findViewById(R.id.image);
             tick = itemView.findViewById(R.id.tick);

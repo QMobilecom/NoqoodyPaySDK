@@ -19,7 +19,7 @@ public class Showdialog_Success {
     public Showdialog_Success(Context context, String Message) {
         Dialog Customdialog;
         Customdialog = new Dialog(context, R.style.full_screen_dialog);
-        Customdialog.setContentView(R.layout.dialoge_success);
+        Customdialog.setContentView(R.layout.noqoodypay_dialoge_success);
         Customdialog.show();
 
         TextView ok = Customdialog.findViewById(R.id.ok);

@@ -12,7 +12,7 @@
 
     <include
         android:id="@+id/layout_loading"
-        layout="@layout/layout_loading"
+        layout="@layout/noqoodypay_layout_loading"
         android:visibility="gone" />
 
 </RelativeLayout>

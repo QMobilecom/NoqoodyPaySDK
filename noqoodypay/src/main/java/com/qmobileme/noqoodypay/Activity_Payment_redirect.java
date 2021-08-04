@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-import com.qmobileme.noqoodypay.databinding.LayoutPaymentBinding;
+import com.qmobileme.noqoodypay.databinding.NoqoodypayLayoutPaymentBinding;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,12 +42,12 @@ import javax.xml.parsers.ParserConfigurationException;
 public class Activity_Payment_redirect extends AppCompatActivity {
 
     String URL, RedirectUrl;
-    LayoutPaymentBinding binding;
+    NoqoodypayLayoutPaymentBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = LayoutPaymentBinding.inflate(getLayoutInflater());
+        binding = NoqoodypayLayoutPaymentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         if (getSupportActionBar() != null)

@@ -19,7 +19,7 @@ public class Showdialog_Failed {
     public Showdialog_Failed(Context context, String Message) {
 
         Customdialog = new Dialog(context, R.style.full_screen_dialog);
-        Customdialog.setContentView(R.layout.dialoge_failed);
+        Customdialog.setContentView(R.layout.noqoodypay_dialoge_failed);
         Customdialog.show();
 
         TextView ok = Customdialog.findViewById(R.id.ok);

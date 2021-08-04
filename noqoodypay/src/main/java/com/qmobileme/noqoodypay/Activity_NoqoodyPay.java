@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
-import com.qmobileme.noqoodypay.databinding.LayoutPaymentlistBinding;
+import com.qmobileme.noqoodypay.databinding.NoqoodypayLayoutPaymentlistBinding;
 import com.qmobileme.noqoodypay.network.APIServiceProvider;
 import com.qmobileme.noqoodypay.network.ApiInterface;
 import com.qmobileme.noqoodypay.network.DataReceiveEvent;
@@ -58,7 +58,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
     Double Amount;
     Login_Response login_response;
     GenerateLinksResponse generateLinksResponse;
-    LayoutPaymentlistBinding binding;
+    NoqoodypayLayoutPaymentlistBinding binding;
     Encoder encoder;
     Adapter_PaymentList adapterpaymentlist;
     List<PaymentChannel> paymentChannelList = new ArrayList<>();
@@ -68,7 +68,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = LayoutPaymentlistBinding.inflate(getLayoutInflater());
+        binding = NoqoodypayLayoutPaymentlistBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         EventBus.getDefault().register(this);
 
