@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnSubmit(View view) {
+        NoqoodyPay.Pay(this, "Iplayin", "Iplayin!1", 10.0, "saneebsalam@gmail.com", "50358807", "9Px8d24D6Mg68j46J5", "hello", "www.iplayin.com", "1112233344", "ClswY%pYj!VWiOLFacvi#W@l");
+
 
         if (editTextTextEmailAddress.getText().toString().isEmpty())
             Toast.makeText(this, "Please Enter Merchant Email", Toast.LENGTH_SHORT).show();

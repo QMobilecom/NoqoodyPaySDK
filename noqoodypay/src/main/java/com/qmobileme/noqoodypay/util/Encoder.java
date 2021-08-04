@@ -2,6 +2,8 @@ package com.qmobileme.noqoodypay.util;
 
 import android.util.Log;
 
+import org.apache.commons.codec.binary.Base64;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -48,7 +50,8 @@ public class Encoder {
             SecretKeySpec secret_key = new SecretKeySpec(ClientSecret.getBytes(), "HmacSHA256");
             sha256_HMAC.init(secret_key);
 
-            hash = org.apache.commons.codec.binary.Base64.encodeBase64String(sha256_HMAC.doFinal(source.getBytes()));
+            hash = new String(Base64.encodeBase64(sha256_HMAC.doFinal(source.getBytes())));
+//            hash = org.apache.commons.codec.binary.Base64.encodeBase64String(sha256_HMAC.doFinal(source.getBytes()));
         } catch (Exception ignored) {
         }
         return hash;
