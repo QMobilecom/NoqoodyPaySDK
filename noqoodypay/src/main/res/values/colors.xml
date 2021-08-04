@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="NoqoodyPaycolorPrimary">#464ba2</color>
-    <color name="trans_colorPrimary">#2C464BA2</color>
+    <color name="NoqoodyPaytrans_colorPrimary">#2C464BA2</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="grey">#acacac</color>
