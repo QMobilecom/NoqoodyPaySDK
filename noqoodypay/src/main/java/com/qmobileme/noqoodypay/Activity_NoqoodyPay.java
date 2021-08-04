@@ -53,8 +53,9 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
     HashMap<String, String> request = new HashMap();
     JSONObject requestJSON;
     HashMap<String, String> headerrequest = new HashMap();
-    String UserName, Password, Amount, CustomerMobile = "", ProjectCode = "", Description = "",
+    String UserName, Password, CustomerMobile = "", ProjectCode = "", Description = "",
             RedirectURL = "", CustomerEmail = "", PaymentURL = "", ReferenceNo = "", ClientSecret = "";
+    Double Amount;
     Login_Response login_response;
     GenerateLinksResponse generateLinksResponse;
     LayoutPaymentlistBinding binding;
@@ -80,7 +81,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
         UserName = getIntent().getStringExtra(NoqoodyPay_Keys.UserName);
         Password = getIntent().getStringExtra(NoqoodyPay_Keys.Password);
-        Amount = getIntent().getStringExtra(NoqoodyPay_Keys.amount);
+        Amount = getIntent().getDoubleExtra(NoqoodyPay_Keys.amount, 0.0);
         CustomerEmail = getIntent().getStringExtra(NoqoodyPay_Keys.CustomerEmail);
         CustomerMobile = getIntent().getStringExtra(NoqoodyPay_Keys.CustomerMobile);
         ProjectCode = getIntent().getStringExtra(NoqoodyPay_Keys.ProjectCode);
@@ -92,8 +93,8 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
         binding.merchantName.setText(UserName);
         binding.description.setText(Description);
-        binding.totalamount.setText("Total Amount: QAR " + NumberFormat_Currency.format(Double.parseDouble(Amount)));
-        binding.granttotal.setText("QAR " + NumberFormat_Currency.format(Double.parseDouble(Amount)));
+        binding.totalamount.setText("Total Amount: QAR " + NumberFormat_Currency.format(Amount));
+        binding.granttotal.setText("QAR " + NumberFormat_Currency.format(Amount));
 
         Glide.with(this)
                 .load(R.drawable.loading_noqoody)

@@ -13,7 +13,7 @@ public class NoqoodyPay {
 
     }
 
-    public static void Pay(Activity activity, String UserName, String Password, String Amount,
+    public static void Pay(Activity activity, String UserName, String Password, Double Amount,
                            String CustomerEmail, String CustomerMobile, String ProjectCode, String Description,
                            String RedirectURL, String Reference, String ClientSecret) {
         Intent intent = new Intent(activity, Activity_NoqoodyPay.class);
