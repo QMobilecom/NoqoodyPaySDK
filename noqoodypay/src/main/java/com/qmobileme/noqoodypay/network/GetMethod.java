@@ -24,9 +24,9 @@ public class GetMethod extends Thread {
     JSONObject responseobject;
     ApiInterface apiInterface;
 
-    public <T> GetMethod(String URL, HashMap<String, String> request, HashMap<String, String> header) {
+    public <T> GetMethod(String baseUrl, String URL, HashMap<String, String> request, HashMap<String, String> header) {
         this.URL = URL;
-        apiInterface = APIServiceProvider.getClient().create(ApiInterface.class);
+        apiInterface = APIServiceProvider.getClient(baseUrl).create(ApiInterface.class);
         responseCall = apiInterface.getcall(URL, request, header);
 
     }

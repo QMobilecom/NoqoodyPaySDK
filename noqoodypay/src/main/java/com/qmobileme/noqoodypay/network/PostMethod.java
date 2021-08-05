@@ -26,9 +26,9 @@ public class PostMethod extends Thread {
     JSONObject responseobject;
     ApiInterface apiInterface;
 
-    public <T> PostMethod(String URL, JSONObject requestJSON, HashMap<String, String> header) {
+    public <T> PostMethod(String baseUrl, String URL, JSONObject requestJSON, HashMap<String, String> header) {
         this.URL = URL;
-        apiInterface = APIServiceProvider.getClient().create(ApiInterface.class);
+        apiInterface = APIServiceProvider.getClient(baseUrl).create(ApiInterface.class);
         responseCall = apiInterface.postcall(URL, header, new Gson().fromJson(requestJSON.toString(), JsonObject.class));
     }
 

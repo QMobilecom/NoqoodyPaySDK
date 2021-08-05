@@ -56,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Please Enter Reference Number", Toast.LENGTH_SHORT).show();
         else if (binding.clientsecret.getText().toString().isEmpty())
             Toast.makeText(this, "Please Enter Client Secret", Toast.LENGTH_SHORT).show();
+        else if (binding.baseurl.getText().toString().isEmpty())
+            Toast.makeText(this, "Please Enter Base URL", Toast.LENGTH_SHORT).show();
         else
-            NoqoodyPay.Pay(MainActivity.this, editTextTextEmailAddress.getText().toString(),
+            NoqoodyPay.Pay(MainActivity.this, binding.baseurl.getText().toString(), editTextTextEmailAddress.getText().toString(),
                     editTextPassword.getText().toString(), Double.parseDouble(et_amount.getText().toString()),
                     binding.cusEmail.getText().toString(), binding.cusMobile.getText().toString(),
                     binding.projectcode.getText().toString(), binding.description.getText().toString(),

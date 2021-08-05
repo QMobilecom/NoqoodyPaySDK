@@ -25,7 +25,7 @@ import retrofit2.http.Url;
 public interface ApiInterface {
 
     //    String baseUrl = "http://api.qatarpay.com/api/";
-    String baseUrl = "https://www.noqoodypay.com/sdk/";
+//    String baseUrl = "https://www.noqoodypay.com/sdk/";
 //    String baseUrl = "http://151.106.28.182:9222/";
 
     String login = "Token";

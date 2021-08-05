@@ -7,6 +7,7 @@ package com.qmobileme.noqoodypay;
 public class NoqoodyPay_Keys {
 
     public static Integer Activity_RequestCode = 101;
+    public static String baseUrl = "baseUrl";
     public static String paymentresult = "paymentresult";
     public static String paymentresult_status = "paymentresult_status";
     public static String paymentresultData = "paymentresultData";

@@ -53,7 +53,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
     HashMap<String, String> request = new HashMap();
     JSONObject requestJSON;
     HashMap<String, String> headerrequest = new HashMap();
-    String UserName, Password, CustomerMobile = "", ProjectCode = "", Description = "",
+    String baseUrl, UserName, Password, CustomerMobile = "", ProjectCode = "", Description = "",
             RedirectURL = "", CustomerEmail = "", PaymentURL = "", ReferenceNo = "", ClientSecret = "";
     Double Amount;
     Login_Response login_response;
@@ -75,8 +75,8 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
         if (getSupportActionBar() != null)
             getSupportActionBar().hide();
 
-
-        apiInterface = APIServiceProvider.getClient().create(ApiInterface.class);
+        baseUrl = getIntent().getStringExtra(NoqoodyPay_Keys.baseUrl);
+        apiInterface = APIServiceProvider.getClient(baseUrl).create(ApiInterface.class);
         encoder = new Encoder();
 
         UserName = getIntent().getStringExtra(NoqoodyPay_Keys.UserName);
@@ -141,7 +141,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
             response = new JSONObject(event.getResponseMessage());
 
             if (event.getResponseStatus()) {
-                if (event.getEventTag().equalsIgnoreCase(apiInterface.login)) {
+                if (event.getEventTag().equalsIgnoreCase(ApiInterface.login)) {
                     login_response = new Gson().fromJson(response.toString(), Login_Response.class);
                     PaymentGenerateLinks(login_response);
                 } else if (event.getEventTag().equalsIgnoreCase(ApiInterface.GenerateLinks_URL)) {
@@ -186,8 +186,8 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
         request.put("password", Password);
 
 
-        Call<Login_Response> ResponseCall = apiInterface.getLogin(apiInterface.login, request);
-        new LoginMethod(ResponseCall, apiInterface.login).start();
+        Call<Login_Response> ResponseCall = apiInterface.getLogin(ApiInterface.login, request);
+        new LoginMethod(ResponseCall, ApiInterface.login).start();
     }
 
     void PaymentGenerateLinks(Login_Response login_response) {
@@ -219,7 +219,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
 
 //        Call<GenerateLinksResponse> ResponseCall = apiInterface.getGenerateLinks(headerrequest, new Gson().fromJson(request.toString(), JsonObject.class));
-        new PostMethod(ApiInterface.GenerateLinks_URL, requestJSON, headerrequest).start();
+        new PostMethod(baseUrl, ApiInterface.GenerateLinks_URL, requestJSON, headerrequest).start();
     }
 
     void PaymentChannels(JSONObject response) {
@@ -231,7 +231,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
         request.put("session_id", generateLinksResponse.getSessionId());
         request.put("uuid", generateLinksResponse.getUuid());
 
-        new GetMethod(ApiInterface.PaymentChannels_URL, request, headerrequest).start();
+        new GetMethod(baseUrl, ApiInterface.PaymentChannels_URL, request, headerrequest).start();
     }
 
     private void PaymentChannelData(JSONObject response) {
@@ -245,7 +245,7 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
 
         request.clear();
         request.put("ReferenceNo", ReferenceNo);
-        new GetMethod(ApiInterface.GetTransactionDetailStatusByClientReference_URL, request, headerrequest).run();
+        new GetMethod(baseUrl, ApiInterface.GetTransactionDetailStatusByClientReference_URL, request, headerrequest).run();
     }
 
     @Override

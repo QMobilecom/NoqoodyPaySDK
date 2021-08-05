@@ -130,6 +130,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
+            <EditText
+                android:id="@+id/baseurl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Base URL"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
 
             <Button
                 android:id="@+id/button"

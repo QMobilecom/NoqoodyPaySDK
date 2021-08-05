@@ -14,7 +14,7 @@ public class APIServiceProvider {
 
     private static Retrofit retrofit;
 
-    public static Retrofit getClient() {
+    public static Retrofit getClient(String baseUrl) {
 
         if (retrofit == null) {
 
@@ -23,7 +23,7 @@ public class APIServiceProvider {
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
 
-            retrofit = new Retrofit.Builder().baseUrl(ApiInterface.baseUrl)
+            retrofit = new Retrofit.Builder().baseUrl(baseUrl)
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(client)
                     .build();
