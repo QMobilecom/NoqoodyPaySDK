@@ -22,9 +22,9 @@ Step 2. Add the dependency
 
 For Payment:
 
- NoqoodyPay.Pay(Activity activity, String UserName, String Password, Double Amount,
-                           String CustomerEmail, String CustomerMobile, String ProjectCode, String Description,
-                           String RedirectURL, String Reference, String ClientSecret)
+            NoqoodyPay.Pay(Activity activity, String baseURL, String UserName, String Password, Double Amount,
+                    String CustomerEmail, String CustomerMobile, String ProjectCode, String Description,
+                    String RedirectURL, String Reference, String ClientSecret);
 
 
      public void onActivityResult(int requestCode, int resultCode, Intent data) {
