@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
         editTextPassword = findViewById(R.id.editTextPassword);
         et_amount = findViewById(R.id.et_amount);
-
     }
 
     public void OnSubmit(View view) {
