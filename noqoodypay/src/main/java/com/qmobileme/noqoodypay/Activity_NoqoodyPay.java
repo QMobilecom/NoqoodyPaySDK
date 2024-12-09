@@ -209,8 +209,12 @@ public class Activity_NoqoodyPay extends AppCompatActivity {
             requestJSON.put("CustomerName", UserName);
             requestJSON.put("Reference", ReferenceNo);
 //        request.put("MerchantDefinedData", System.currentTimeMillis() + "define");
+            String amountHash = Amount.toString();
+            if (Amount % 1 == 0)
+                amountHash = amountHash.split("\\.")[0];
+
             requestJSON.put("SecureHash", encoder.HmacSHA256(CustomerEmail + UserName +
-                    CustomerMobile + Description + ProjectCode + ReferenceNo, ClientSecret));
+                    CustomerMobile + Description + ProjectCode + ReferenceNo + amountHash, ClientSecret));
         } catch (JSONException e) {
             e.printStackTrace();
         }
